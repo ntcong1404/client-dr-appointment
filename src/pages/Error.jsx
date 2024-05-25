@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Error = () => {
   return (
     <section>
@@ -23,9 +25,9 @@ const Error = () => {
         </div>
         <p className="mt-4 text-gray-600">
           Let's get you back
-          <a href="/" className="text-blue-500">
+          <Link to="/" className="text-blue-500">
             home
-          </a>
+          </Link>
           .
         </p>
       </div>

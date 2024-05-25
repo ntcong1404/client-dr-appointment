@@ -7,7 +7,7 @@ import {
   FaUsers,
 } from "react-icons/fa";
 import { MdLogout } from "react-icons/md";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import onToTop from "../assets/images/onToTop.svg";
 import { useEffect, useState } from "react";
 
@@ -36,7 +36,7 @@ const AdminPage = ({ children }) => {
     <div className=" grid grid-cols-10 bg-[#e9f1fa] gap-4 ">
       <div className=" col-span-3 lg:col-span-2 md:col-span-2 p-4 bg-gradient-to-r from-sky-400 via-cyan-400 to-sky-400 shadow ">
         <h2 className=" pt-6 text-center text-md md:text-2xl lg:text-3xl font-bold text-white">
-          <a href="/admin">Dashboard</a>
+          <Link to="/admin">Dashboard</Link>
         </h2>
 
         <div className="flex justify-center py-4">
