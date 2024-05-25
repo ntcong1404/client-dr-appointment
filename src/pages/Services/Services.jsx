@@ -7,7 +7,6 @@ import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 const Services = () => {
   const [services, setServices] = useState();
   const [isOpen, setIsOpen] = useState(false);
-  console.log(isOpen);
   const toggleAccordion = (index) => {
     if (isOpen === index) setIsOpen(false);
     else setIsOpen(index);

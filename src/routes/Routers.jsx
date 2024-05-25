@@ -1,4 +1,4 @@
-import { Protected, Public, Admin } from "../service/autho";
+import { Protected, Public, Admin } from "../service/Autho";
 import Layout from "../layout/Layout";
 import Home from "../pages/Home";
 import Services from "../pages/Services/Services";
