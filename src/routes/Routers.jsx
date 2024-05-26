@@ -29,9 +29,7 @@ const Routers = () => {
           path="/"
           element={
             <Layout>
-              <Public>
-                <Home />
-              </Public>
+              <Home />
             </Layout>
           }
         />
@@ -40,9 +38,7 @@ const Routers = () => {
           path="/doctors"
           element={
             <Layout>
-              <Public>
-                <Doctors />
-              </Public>
+              <Doctors />
             </Layout>
           }
         />
@@ -51,9 +47,7 @@ const Routers = () => {
           path="/login"
           element={
             <Layout>
-              <Public>
-                <Login />
-              </Public>
+              <Login />
             </Layout>
           }
         />
@@ -71,29 +65,16 @@ const Routers = () => {
           path="/location"
           element={
             <Layout>
-              <Public>
-                <Locations />
-              </Public>
+              <Locations />
             </Layout>
           }
         />
-        <Route
-          path="/location/:id"
-          element={
-            <Layout>
-              <Public>
-                <LocationsDetails />
-              </Public>
-            </Layout>
-          }
-        />
+
         <Route
           path="/about"
           element={
             <Layout>
-              <Public>
-                <About />
-              </Public>
+              <About />
             </Layout>
           }
         />
@@ -102,9 +83,7 @@ const Routers = () => {
           path="/services"
           element={
             <Layout>
-              <Public>
-                <Services />
-              </Public>
+              <Services />
             </Layout>
           }
         />
@@ -135,6 +114,14 @@ const Routers = () => {
             <Admin>
               <AdminPage />
             </Admin>
+          }
+        />
+        <Route
+          path="/location/:id"
+          element={
+            <Layout>
+              <LocationsDetails />
+            </Layout>
           }
         />
         <Route
