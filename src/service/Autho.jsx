@@ -10,11 +10,7 @@ export const Protected = ({ children }) => {
 };
 
 export const Public = ({ children }) => {
-  const token = localStorage.getItem("token");
-  if (!token) {
-    return children;
-  }
-  return <Navigate to={"/"} replace={true}></Navigate>;
+  return children;
 };
 
 export const Admin = ({ children }) => {

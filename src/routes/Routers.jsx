@@ -1,3 +1,4 @@
+import { BrowserRouter } from "react-router-dom";
 import { Protected, Public, Admin } from "../service/Autho";
 import Layout from "../layout/Layout";
 import Home from "../pages/Home";
@@ -22,156 +23,174 @@ import { Route, Routes } from "react-router-dom";
 
 const Routers = () => {
   return (
-    <Routes>
-      <Route
-        path="/"
-        element={
-          <Layout>
-            <Home />
-          </Layout>
-        }
-      />
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Layout>
+              <Public>
+                <Home />
+              </Public>
+            </Layout>
+          }
+        />
 
-      <Route
-        path="/doctors"
-        element={
-          <Layout>
-            <Doctors />
-          </Layout>
-        }
-      />
+        <Route
+          path="/doctors"
+          element={
+            <Layout>
+              <Public>
+                <Doctors />
+              </Public>
+            </Layout>
+          }
+        />
 
-      <Route
-        path="/login"
-        element={
-          <Layout>
-            <Login />
-          </Layout>
-        }
-      />
-      <Route
-        path="/register"
-        element={
-          <Layout>
-            <Signup />
-          </Layout>
-        }
-      />
-      <Route
-        path="/location"
-        element={
-          <Layout>
-            <Locations />
-          </Layout>
-        }
-      />
-      <Route
-        path="/location/:id"
-        element={
-          <Layout>
-            <LocationsDetails />
-          </Layout>
-        }
-      />
-      <Route
-        path="/about"
-        element={
-          <Layout>
-            <About />
-          </Layout>
-        }
-      />
+        <Route
+          path="/login"
+          element={
+            <Layout>
+              <Public>
+                <Login />
+              </Public>
+            </Layout>
+          }
+        />
+        <Route
+          path="/register"
+          element={
+            <Layout>
+              <Public>
+                <Signup />
+              </Public>
+            </Layout>
+          }
+        />
+        <Route
+          path="/location"
+          element={
+            <Layout>
+              <Public>
+                <Locations />
+              </Public>
+            </Layout>
+          }
+        />
+        <Route
+          path="/location/:id"
+          element={
+            <Layout>
+              <Public>
+                <LocationsDetails />
+              </Public>
+            </Layout>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <Layout>
+              <Public>
+                <About />
+              </Public>
+            </Layout>
+          }
+        />
 
-      <Route
-        path="/services"
-        element={
-          <Layout>
-            <Services />
-          </Layout>
-        }
-      />
+        <Route
+          path="/services"
+          element={
+            <Layout>
+              <Public>
+                <Services />
+              </Public>
+            </Layout>
+          }
+        />
 
-      <Route
-        path="/appointment"
-        element={
-          <Layout>
-            <Protected>
-              <Appointment />
-            </Protected>
-          </Layout>
-        }
-      />
-      <Route
-        path="/profile"
-        element={
-          <Layout>
-            <Protected>
-              <Profile />
-            </Protected>
-          </Layout>
-        }
-      />
-      <Route
-        path="/admin"
-        element={
-          <Admin>
-            <AdminPage />
-          </Admin>
-        }
-      />
-      <Route
-        path="/admin/users"
-        element={
-          <Admin>
-            <AdminPage>
-              <AdminUsers />
-            </AdminPage>
-          </Admin>
-        }
-      />
-      <Route
-        path="/admin/doctors"
-        element={
-          <Admin>
-            <AdminPage>
-              <AdminDoctors />
-            </AdminPage>
-          </Admin>
-        }
-      />
-      <Route
-        path="/admin/appointments"
-        element={
-          <Admin>
-            <AdminPage>
-              <AdminAppointment />
-            </AdminPage>
-          </Admin>
-        }
-      />
-      <Route
-        path="/admin/services"
-        element={
-          <Admin>
-            <AdminPage>
-              <AdminService />
-            </AdminPage>
-          </Admin>
-        }
-      />
-      <Route
-        path="/admin/profile"
-        element={
-          <Admin>
-            <AdminPage>
-              <AdminProfile />
-            </AdminPage>
-          </Admin>
-        }
-      />
+        <Route
+          path="/appointment"
+          element={
+            <Layout>
+              <Protected>
+                <Appointment />
+              </Protected>
+            </Layout>
+          }
+        />
+        <Route
+          path="/profile"
+          element={
+            <Layout>
+              <Protected>
+                <Profile />
+              </Protected>
+            </Layout>
+          }
+        />
+        <Route
+          path="/admin"
+          element={
+            <Admin>
+              <AdminPage />
+            </Admin>
+          }
+        />
+        <Route
+          path="/admin/users"
+          element={
+            <Admin>
+              <AdminPage>
+                <AdminUsers />
+              </AdminPage>
+            </Admin>
+          }
+        />
+        <Route
+          path="/admin/doctors"
+          element={
+            <Admin>
+              <AdminPage>
+                <AdminDoctors />
+              </AdminPage>
+            </Admin>
+          }
+        />
+        <Route
+          path="/admin/appointments"
+          element={
+            <Admin>
+              <AdminPage>
+                <AdminAppointment />
+              </AdminPage>
+            </Admin>
+          }
+        />
+        <Route
+          path="/admin/services"
+          element={
+            <Admin>
+              <AdminPage>
+                <AdminService />
+              </AdminPage>
+            </Admin>
+          }
+        />
+        <Route
+          path="/admin/profile"
+          element={
+            <Admin>
+              <AdminPage>
+                <AdminProfile />
+              </AdminPage>
+            </Admin>
+          }
+        />
 
-      <Route path="*" element={<Error />} />
-    </Routes>
+        <Route path="*" element={<Error />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

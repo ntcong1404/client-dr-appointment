@@ -10,7 +10,7 @@ import {
 } from "react-icons/bi";
 import { RiEyeFill, RiEyeOffFill } from "react-icons/ri";
 import * as Service from "../service/Service";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -72,9 +72,9 @@ const Login = () => {
         <h2 className="text-4xl tracking-tight">Sign in into your account</h2>
         <span className="text-sm ">
           or
-          <Link to="/register" className="pl-2 text-blue-500">
+          <a href="/register" className="pl-2 text-blue-500">
             register a new account
-          </Link>
+          </a>
         </span>
       </div>
       <div className="flex justify-center my-2 mx-4 md:mx-0">
@@ -129,9 +129,9 @@ const Login = () => {
               </div>
             </div>
             <div className="w-full flex items-center justify-between px-3 mb-3 ">
-              <Link to="#" className="text-blue-500 text-sm tracking-tight">
+              <a href="#" className="text-blue-500 text-sm tracking-tight">
                 Forget your password?
-              </Link>
+              </a>
             </div>
             <div className="w-full md:w-full px-3 mb-6">
               <button className="appearance-none block w-full bg-[#187F6B] text-gray-100 font-bold border border-gray-200 rounded-lg py-3 px-3 leading-tight hover:bg-[#205f54] focus:border-gray-500">

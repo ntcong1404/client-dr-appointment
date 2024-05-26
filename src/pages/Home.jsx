@@ -7,7 +7,6 @@ import loca1 from "../assets/images/loca1.webp";
 import loca2 from "../assets/images/loca2.webp";
 import loca3 from "../assets/images/loca3.webp";
 import Main from "../components/Main/Main";
-import { Link } from "react-router-dom";
 
 const reason = [
   {
@@ -107,7 +106,7 @@ const Home = () => {
                 className="py-[30px] px-5 flex flex-wrap items-center justify-center"
               >
                 <div className="flex items-center justify-center ">
-                  <Link to={item?.to}>
+                  <a href={item?.to}>
                     <div className="hover:cursor-pointer group relative">
                       <div className=" overflow-hidden">
                         <img
@@ -120,7 +119,7 @@ const Home = () => {
                         <p className=" text-[11px] text-white">{item?.desc}</p>
                       </div>
                     </div>
-                  </Link>
+                  </a>
                 </div>
 
                 <div className=" mt-[20px]  ">

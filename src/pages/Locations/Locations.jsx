@@ -45,7 +45,7 @@ const Locations = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-3 mt-[10px] lg:mt-[10px]">
             {location?.map((item, index) => (
               <a
-                href={item.to}
+                href={item?.to}
                 key={index}
                 className=" flex flex-wrap items-center justify-center rounded-md shadow-md group"
               >
